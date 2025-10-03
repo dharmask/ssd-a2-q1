@@ -5,15 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CS6.302 - Software System Development (Transformed)</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     body { font-family: 'Quicksand', sans-serif; background-color: #f8f9fa; }
-    header { background: #343a40; color: white; padding: 2rem 1rem; }
-    header h1, header h3 { margin: 0.3rem 0; }
-    section { padding: 3rem 1rem; }
+    header { 
+      background: linear-gradient(135deg, #343a40, #495057); 
+      color: white; 
+      padding: 7rem 1rem 5rem 1rem; 
+      text-align: center;
+    }
+    header h1 { font-size: 2.8rem; font-weight: bold; }
+    header h3 { font-size: 1.3rem; }
+    section { padding: 3rem 0; }
+    .section-alt { background-color: #f1f3f5; }
     .table thead { background: #343a40; color: white; }
-    .footer { background: #212529; color: #ccc; text-align: center; padding: 1rem; margin-top: 2rem; }
+    .footer { background: #212529; color: #ccc; text-align: center; padding: 1.5rem; margin-top: 2rem; }
     .nav-link { color: white !important; }
     .nav-link:hover { text-decoration: underline; }
+    .card { margin-bottom: 1rem; }
   </style>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
@@ -40,51 +49,57 @@
 </nav>
 
 <!-- Header -->
-<header id="home" class="text-center">
-  <h1>CS6.302 - Software System Development</h1>
+<header id="home">
+  <h1>CS6.302 – Software System Development</h1>
   <h3>Software Engineering Research Center, IIIT Hyderabad</h3>
   <h3>Monsoon 2025</h3>
 </header>
 
-<main class="container">
+<main>
 
-<section id="about">
-  <h2>About</h2>
-  <p>Software System Development is a graduate-level course that equips students with a comprehensive understanding...</p>
+<section id="about" class="section-alt">
+  <div class="container">
+    <h2><i class="bi bi-info-circle"></i> About</h2>
+    <p>Software System Development is a graduate-level course that equips students with a comprehensive understanding of the principles, tools, and practices involved in designing and building modern software systems. Students will gain hands-on experience with Bash scripting, SQL, NoSQL, HTML, CSS, JavaScript, Python, Flask and more. The focus is on scalable, maintainable, and secure systems.</p>
+  </div>
 </section>
 
 <section id="lecture">
-  <h2>Lecture & Lab Hours</h2>
-  <ul>
-    <li>Lecture 🏛️ : 8:30 AM – 9:55 AM (Tue & Fri) – Lecture Hall: H-205</li>
-    <li>Lab 💻 : 2:00 – 5:00 PM (Fri) – Lecture Hall: SH1</li>
-  </ul>
+  <div class="container">
+    <h2><i class="bi bi-journal-bookmark"></i> Lecture & Lab Hours</h2>
+    <ul>
+      <li>Lecture 🏛️ : 8:30 AM – 9:55 AM (Tue & Fri) – Lecture Hall: H-205</li>
+      <li>Lab 💻 : 2:00 – 5:00 PM (Fri) – Lecture Hall: SH1</li>
+    </ul>
+  </div>
 </section>
 
-<section id="cpolicy">
-  <h2>Course Policy</h2>
-  <div class="accordion" id="policyAccordion">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-          Teaching & Learning
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#policyAccordion">
-        <div class="accordion-body">
-          This course is designed to help learners get the essence of principles behind good software system development...
+<section id="cpolicy" class="section-alt">
+  <div class="container">
+    <h2><i class="bi bi-clipboard-check"></i> Course Policy</h2>
+    <div class="accordion" id="policyAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            Teaching & Learning
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#policyAccordion">
+          <div class="accordion-body">
+            This course is designed to promote deeper engagement by solving real-life problems and fostering true career skills...
+          </div>
         </div>
       </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-          Academic Honesty
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#policyAccordion">
-        <div class="accordion-body">
-          No plagiarism or cheating tolerated. Zero tolerance policy...
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Academic Honesty
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#policyAccordion">
+          <div class="accordion-body">
+            Plagiarism or cheating will result in zero marks. Maintain academic integrity at all times.
+          </div>
         </div>
       </div>
     </div>
@@ -92,45 +107,53 @@
 </section>
 
 <section id="schedule">
-  <h2>Lecture Schedule</h2>
-  <table class="table table-striped table-hover">
-    <thead>
-      <tr><th>#</th><th>Date</th><th>Topic</th><th>Material</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td>01-Aug-25</td><td>Course Intro</td><td><a href="#">Slides</a></td></tr>
-      <tr><td>2</td><td>05-Aug-25</td><td>Relational Data</td><td><a href="#">Slides</a></td></tr>
-      <tr><td>3</td><td>08-Aug-25</td><td>Unstructured Data</td><td><a href="#">Slides</a></td></tr>
-    </tbody>
-  </table>
+  <div class="container">
+    <h2><i class="bi bi-calendar-event"></i> Lecture Schedule</h2>
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr><th>#</th><th>Date</th><th>Topic</th><th>Material</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>01-Aug-25</td><td>Course Intro</td><td><a href="#">Slides</a></td></tr>
+        <tr><td>2</td><td>05-Aug-25</td><td>Relational Data</td><td><a href="#">Slides</a></td></tr>
+        <tr><td>3</td><td>08-Aug-25</td><td>Unstructured Data</td><td><a href="#">Slides</a></td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
-<section id="lab">
-  <h2>Lab Schedule</h2>
-  <table class="table table-bordered">
-    <thead>
-      <tr><th>#</th><th>Date</th><th>Topic</th><th>Notes</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td>7-Aug-25</td><td>Git Session</td><td><a href="#">Slides</a></td></tr>
-      <tr><td>2</td><td>14-Aug-25</td><td>SQL Session</td><td><a href="#">Slides</a></td></tr>
-    </tbody>
-  </table>
+<section id="lab" class="section-alt">
+  <div class="container">
+    <h2><i class="bi bi-laptop"></i> Lab Schedule</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr><th>#</th><th>Date</th><th>Topic</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>7-Aug-25</td><td>Git Session</td><td><a href="#">Slides</a></td></tr>
+        <tr><td>2</td><td>14-Aug-25</td><td>SQL Session</td><td><a href="#">Slides</a></td></tr>
+      </tbody>
+    </table>
+  </div>
 </section>
 
 <section id="activity">
-  <h2>Exams</h2>
-  <ul>
-    <li>Assignment – SQL, NoSQL – Due: 5-Sept-2025</li>
-    <li>Assignment – Web – Due: 5-Oct-2025</li>
-    <li>Quiz 1 – 29-Aug-2025</li>
-  </ul>
+  <div class="container">
+    <h2><i class="bi bi-pencil-square"></i> Exams</h2>
+    <div class="row">
+      <div class="col-md-4"><div class="card"><div class="card-body"><h5>Assignment – SQL, NoSQL</h5><p>Due: 5-Sept-2025</p></div></div></div>
+      <div class="col-md-4"><div class="card"><div class="card-body"><h5>Assignment – Web</h5><p>Due: 5-Oct-2025</p></div></div></div>
+      <div class="col-md-4"><div class="card"><div class="card-body"><h5>Quiz 1</h5><p>29-Aug-2025</p></div></div></div>
+    </div>
+  </div>
 </section>
 
-<section id="staff">
-  <h2>Staff</h2>
-  <p><b>Instructors:</b> Dr. Abhishek Singh, Dr. Sai Anirudh Karre</p>
-  <p><b>Teaching Assistants:</b> Chirag Dhamija, Tejas Cavale, Divyansh Pandey...</p>
+<section id="staff" class="section-alt">
+  <div class="container">
+    <h2><i class="bi bi-people"></i> Staff</h2>
+    <p><b>Instructors:</b> Dr. Abhishek Singh, Dr. Sai Anirudh Karre</p>
+    <p><b>Teaching Assistants:</b> Chirag Dhamija, Tejas Cavale, Divyansh Pandey, Aaditya Vardhan Narain, Kunal Bhosikar...</p>
+  </div>
 </section>
 
 </main>
